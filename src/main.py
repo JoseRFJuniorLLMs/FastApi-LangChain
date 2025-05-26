@@ -3,11 +3,12 @@
 # Ele define as rotas da API e orquestra a interação entre os diferentes componentes.
 
 from fastapi import FastAPI, File, UploadFile, HTTPException
-from pydantic_models import QueryInput, QueryResponse, DocumentInfo, DeleteFileRequest
-from langchain_utils import get_rag_chain
-from db_utils import insert_application_logs, get_chat_history, get_all_documents, insert_document_record, \
+# Importações relativas para módulos dentro do mesmo pacote 'src'
+from .pydantic_models import QueryInput, QueryResponse, DocumentInfo, DeleteFileRequest
+from .langchain_utils import get_rag_chain
+from .db_utils import insert_application_logs, get_chat_history, get_all_documents, insert_document_record, \
     delete_document_record
-from chroma_utils import index_document_to_chroma, delete_doc_from_chroma
+from .chroma_utils import index_document_to_chroma, delete_doc_from_chroma
 import os
 import uuid
 import logging
@@ -188,5 +189,5 @@ async def delete_document(request: DeleteFileRequest):
         logging.error(f"Erro geral ao excluir documento com file_id {file_id}: {e}")
         raise HTTPException(status_code=500, detail=f"Ocorreu um erro ao excluir o documento: {e}")
 
-# Para executar a aplicação, você usaria: uvicorn main:app --reload
+# Para executar a aplicação, você usaria: uvicorn src.main:app --reload
 # Certifique-se de que o uvicorn esteja instalado.

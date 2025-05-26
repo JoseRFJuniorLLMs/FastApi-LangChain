@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env
+*.bak
+*.tmp
+
+# Ambiente Virtual
+.venv/
+
+# Credenciais e arquivos sensíveis (EXCLUINDO SEU JSON DE CREDENCIAIS)
+credentials.json
+.env
+.env.*
+.flaskenv
+
+# Banco de Dados ChromaDB
+chroma_db/
+
+# Logs
+*.log
+!app.log # Se você quiser que o app.log seja versionado, remova esta linha e mantenha apenas *.log acima
+# Se quiser ignorar todos os logs, apenas mantenha *.log e remova !app.log
+
+# IDEs e Ferramentas
+.idea/                  # JetBrains IDEs (PyCharm, IntelliJ, etc.)
+.vscode/                # VS Code
+*.sublime-project
+*.sublime-workspace
+.DS_Store               # macOS
+Thumbs.db               # Windows
+
+# Testes e dados temporários
+.pytest_cache/
+.coverage
+htmlcov/
+.nox/
+dist/
+build/
+*.egg-info/
