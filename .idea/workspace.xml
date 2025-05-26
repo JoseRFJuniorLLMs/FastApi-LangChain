@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="72eba5c6-877a-4f89-8aa2-c2f50fda5f1c" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rag_app.db" beforeDir="false" afterPath="$PROJECT_DIR$/rag_app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/langchain_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/langchain_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pydantic_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pydantic_models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748297961292</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1748298177434</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748298177434</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
