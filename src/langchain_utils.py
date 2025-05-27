@@ -60,12 +60,12 @@ qa_prompt = ChatPromptTemplate.from_messages([
 ])
 
 
-def get_rag_chain(model: str = "ggemini-1.5-flash"):
+def get_rag_chain(model: str = "ggemini-2.0-flash"):
     """
     Cria e retorna a cadeia RAG (Retrieval-Augmented Generation).
 
     Args:
-        model (str): O nome do modelo de linguagem a ser usado (padrão: "gemini-1.5-flash").
+        model (str): O nome do modelo de linguagem a ser usado (padrão: "gemini-2.0-flash").
 
     Returns:
         Runnable: A cadeia RAG completa pronta para ser invocada.

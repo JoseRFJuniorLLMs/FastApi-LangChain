@@ -13,6 +13,27 @@ import os
 import uuid
 import logging
 import shutil
+import sys # Necessário para sys.modules
+
+# **************** LINHA ADICIONADA PARA DEPURAR O CAMINHO CORRETO ****************
+try:
+    # Tente importar o módulo pydantic_models de forma absoluta para garantir que estamos pegando a versão correta.
+    # Isso funciona quando 'src' está no PYTHONPATH ou quando você executa 'uvicorn src.main:app'
+    # que adiciona o diretório pai de 'src' ao PYTHONPATH.
+    import src.pydantic_models as pydantic_models_debug_module
+    print(f"Pydantic models imported from (debug): {pydantic_models_debug_module.__file__}")
+
+    # Verifique se o ModelName contém a entrada correta
+    if hasattr(pydantic_models_debug_module, 'ModelName'):
+        print(f"ModelName Enum values: {[e.value for e in pydantic_models_debug_module.ModelName]}")
+    else:
+        print("ModelName Enum not found in pydantic_models_debug_module.")
+
+except ImportError as ie:
+    print(f"ImportError: Could not import src.pydantic_models for debugging: {ie}")
+except Exception as e:
+    print(f"General error during pydantic_models debug import: {e}")
+# ********************************************************************************
 
 # Configura o logging para a aplicação.
 # Os logs serão gravados no arquivo 'app.log' com nível INFO.
@@ -39,6 +60,7 @@ async def chat(query_input: QueryInput):
     """
     # Gera um ID de sessão se não for fornecido.
     session_id = query_input.session_id or str(uuid.uuid4())
+    # query_input.model é um ModelName Enum, para obter o valor da string, usamos .value
     logging.info(
         f"ID da Sessão: {session_id}, Pergunta do Usuário: {query_input.question}, Modelo: {query_input.model.value}")
 
@@ -46,7 +68,7 @@ async def chat(query_input: QueryInput):
         # Recupera o histórico de chat para a sessão atual.
         chat_history = get_chat_history(session_id)
         # Obtém a cadeia RAG configurada com o modelo especificado.
-        rag_chain = get_rag_chain(query_input.model.value)
+        rag_chain = get_rag_chain(query_input.model.value) # Usa o valor da enumeração
 
         # Invoca a cadeia RAG para gerar uma resposta.
         # O 'input' é a pergunta do usuário e 'chat_history' fornece o contexto da conversa.

@@ -5,7 +5,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmb
 try:
     print("Tentando inicializar ChatGoogleGenerativeAI...")
     # ATUALIZE ESTA LINHA PARA USAR O MODELO CORRETO
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.7)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash", temperature=0.7)
     print("ChatGoogleGenerativeAI inicializado com sucesso!")
 
     print("\nTentando inicializar GoogleGenerativeAIEmbeddings...")
