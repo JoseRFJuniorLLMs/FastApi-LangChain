@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72eba5c6-877a-4f89-8aa2-c2f50fda5f1c" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/assets/arquitetura.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mcp/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mcp/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mcp/engines/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mcp/engines/base_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mcp/engines/claude_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mcp/engines/gemini_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mcp/router.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/langchain_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/langchain_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pydantic_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pydantic_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_gemini.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_gemini.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748300348567</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <option name="closed" value="true" />
+      <created>1748304626312</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1748304626312</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
